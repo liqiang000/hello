@@ -102,7 +102,7 @@ spec:
         # This container installs the Calico CNI binaries
         # and CNI network config file on each node.
         - name: install-cni
-          image: 192.168.0.179/system_containers/cni:v3.5.3
+          image: lq.harbor.io/system_containers/cni:v3.5.3
           command: ["/install-cni.sh"]
           env:
             # Name of the CNI config file to create.
@@ -138,7 +138,7 @@ spec:
         # container programs network policy and routes on each
         # host.
         - name: calico-node
-          image: 192.168.0.179/system_containers/node:v3.5.3
+          image: lq.harbor.io/system_containers/node:v3.5.3
           env:
             # Use Kubernetes API as the backing datastore.
             - name: DATASTORE_TYPE
